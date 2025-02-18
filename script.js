@@ -1,9 +1,9 @@
-document.querySelector('.navbar__link').addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    window.scrollTo({
-      top: target.offsetTop - 60,
-      behavior: 'smooth'
-    });
+document.querySelectorAll('.navbar__link').forEach(link => {
+  link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+          window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
+      }
   });
-  
+});
