@@ -47,12 +47,14 @@
             margin-left: auto;
         }
 
-        .nav-links span {
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
             cursor: pointer;
             transition: opacity 0.2s;
         }
 
-        .nav-links span:hover {
+        .nav-links a:hover {
             opacity: 0.8;
         }
 
@@ -155,9 +157,9 @@
         <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ecc09fec-e0fb-49d9-a0f0-da4cc2700834" alt="Flex Tok Logo">
         <span>Flex<br>Tok</span>
         <div class="nav-links">
-            <span>Home</span>
-            <span>About</span>
-            <span>Features</span>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="index.html#features" class="nav-link">Features</a>
+            <a href="index.html#about" class="nav-link">About</a>
         </div>
     </div>
 </div>
@@ -166,30 +168,29 @@
         <main>
             <h1>Memes from February</h1>
 
-            <!-- Meme Grid -->
-            <div class="meme-grid">
-                <!-- Green FN -->
-                <div class="meme-card">
-                    <h2>Green Fn 🏀</h2>
-                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a6603dba-e086-4c6f-a4b5-01706d5c31cb" alt="Green FN Meme">
-                    <p>The Green FN meme exploded in 2024, celebrating flawless, game-winning plays in gaming. The phrase "Green FN" became synonymous with perfect clips, similar to a buzzer-beater in basketball. Gamers flooded TikTok and Twitter with highlight reels, turning their smoothest moments into viral "Green FN" clips.</p>
-                </div>
+            !-- Meme Grid -->
+<div class="meme-grid">
+    <!-- Chick-Fil-A Sauce -->
+    <div class="meme-card">
+        <h2>Chick-fil-a Sauce 🐄</h2>
+        <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a6603dba-e086-4c6f-a4b5-01706d5c31cb" alt="Chick-fil-A Sauce Meme">
+        <p>The Chick-fil-A Sauce meme blew up in 2024, with fans treating the sauce like liquid gold. TikTok and Twitter were filled with jokes about its obsessive appeal, with people willing to trade anything for an extra packet. What started as a condiment became a viral obsession.</p>
+    </div>
 
-                <!-- Chick-Fil-A Sauce -->
-                <div class="meme-card">
-                    <h2>Chick-Fil-a Sauce 🐄</h2>
-                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5728b506-a2d5-4d26-83e3-29ad6d845ba9" alt="Chick-fil-A Sauce Meme">
-                    <p>The Chick-fil-A Sauce meme blew up in 2024, with fans treating the sauce like liquid gold. TikTok and Twitter were filled with jokes about its obsessive appeal, with people willing to trade anything for an extra packet. What started as a condiment became a viral obsession.</p>
-                </div>
+    <!-- Green FN -->
+    <div class="meme-card">
+        <h2>Green Fn 🏀</h2>
+        <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5728b506-a2d5-4d26-83e3-29ad6d845ba9" alt="Green FN Meme">
+        <p>The Green FN meme exploded in 2024, celebrating flawless, game-winning plays in gaming. The phrase "Green FN" became synonymous with perfect clips, similar to a buzzer-beater in basketball. Gamers flooded TikTok and Twitter with highlight reels, turning their smoothest moments into viral "Green FN" clips.</p>
+    </div>
 
-                <!-- Costco Guys -->
-                <div class="meme-card">
-                    <h2>Costco Guys 🥖</h2>
-                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5cbfb508-90de-4ed3-b516-7b53a4143541" alt="Costco Guys">
-                    <p>The Costco Guys meme went viral in 2024, featuring a group of friends dramatically reviewing Costco foods with an exaggerated "boom" rating scale. Their over-the-top enthusiasm turned items like chicken bakes and pizza into Michelin-star experiences. The meme gained popularity on TikTok, with fans loving their absurd yet entertaining food critiques.</p>
-                </div>
-            </div>
-
+    <!-- Costco Guys -->
+    <div class="meme-card">
+        <h2>Costco Guys 🥖</h2>
+        <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5cbfb508-90de-4ed3-b516-7b53a4143541" alt="Costco Guys Meme">
+        <p>The Costco Guys meme went viral in 2024, featuring a group of friends dramatically reviewing Costco foods with an exaggerated "boom" rating scale. Their over-the-top enthusiasm turned items like chicken bakes and pizza into Michelin-star experiences. The meme gained popularity on TikTok, with fans loving their absurd yet entertaining food critiques.</p>
+    </div>
+</div>
             <!-- Navigation Controls -->
             <div class="navigation-controls">
                 <a href="january.html" class="nav-button">
@@ -204,14 +205,14 @@
         <!-- Bottom Navbar -->
         <footer class="bottom-navbar">
             <div class="footer-nav">
-                <span>Home</span>
-                <span>About</span>
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="index.html#about" class="footer-link">About</a>
                 <div class="github-button">
                     <img src="path/to/github-icon.png" alt="GitHub icon">
                     <span>Star us on GitHub</span>
                 </div>
-                <span>Contact</span>
-                <span>Features</span>
+                <a href="index.html#about" class="footer-link">Contact</a>
+                <a href="index.html#features" class="footer-link">Features</a>
             </div>
         </footer>
     </div>

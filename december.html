@@ -28,7 +28,7 @@
             margin-bottom: 2rem;
         }
 
-        .nav-bar-bg {
+        .navbar__container {
             width: 100%;
             max-width: 600px;
             height: 48px;
@@ -41,19 +41,24 @@
             gap: 1rem;
         }
 
-        .logo-container {
+        .navbar__logo {
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
 
-        .nav-links {
+        .navbar__logo-img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .navbar__links {
             display: flex;
             gap: 2rem;
             margin-left: auto;
         }
 
-        .nav-links a {
+        .navbar__link {
             cursor: pointer;
             transition: opacity 0.2s;
             font-family: 'Nunito', sans-serif;
@@ -63,7 +68,7 @@
             text-decoration: none;
         }
 
-        .nav-links a:hover {
+        .navbar__link:hover {
             opacity: 0.8;
         }
 
@@ -185,7 +190,7 @@
         }
 
         @media (max-width: 768px) {
-            .nav-links {
+            .navbar__links {
                 display: none;
             }
 
@@ -200,15 +205,16 @@
     <div class="frame">
         <!-- Navigation Bar -->
         <nav class="navbar">
-            <div class="nav-bar-bg">
-                <div class="logo-container">
-                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8ebbd868-28b3-4fe7-9041-c502cca96413" alt="Flex Tok Logo" class="logo">
-                    <span class="brand-name">Flex<br>Tok</span>
+            <div class="navbar__container">
+                <div class="navbar__logo">
+                    <a href="index.html">
+                        <img src="/components/flextok_logo.png" alt="FlexTok Logo" class="navbar__logo-img">
+                    </a>
                 </div>
-                <div class="nav-links">
-                    <a href="#" class="nav-link">Home</a>
-                    <a href="#" class="nav-link">About</a>
-                    <a href="#" class="nav-link">Features</a>
+                <div class="navbar__links">
+                    <a href="index.html" class="navbar__link">Home</a>
+                    <a href="index.html#features" class="navbar__link">Features</a>
+                    <a href="index.html#about" class="navbar__link">About</a>
                 </div>
             </div>
         </nav>
@@ -252,14 +258,13 @@
         <!-- Bottom Navigation -->
         <footer class="bottom-navbar">
             <nav class="footer-nav">
-                <a href="#" class="footer-link">Home</a>
-                <a href="#" class="footer-link">About</a>
-                <a href="#" class="footer-link">Contact</a>
-                <a href="#" class="footer-link">Features</a>
-                <a href="https://github.com/your-repo" class="github-button">
-                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9f4b9c7c-165d-403e-b990-7b1603698dbb" alt="GitHub Icon">
-                    Star us on GitHub
-                </a>
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="index.html#about" class="footer-link">About</a>
+                <div class="github-button">
+                    <!-- ... existing code ... -->
+                </div>
+                <a href="index.html#about" class="footer-link">Contact</a>
+                <a href="index.html#features" class="footer-link">Features</a>
             </nav>
         </footer>
     </div>

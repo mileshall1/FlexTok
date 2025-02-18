@@ -83,10 +83,7 @@ body:not(:hover) .cursor {
     margin-bottom: 4rem;
     display: flex;
     justify-content: center;
-        opacity: 0;
-    transform: translateY(-30px);
-    animation: slideUp 1s ease-out forwards;
-    animation-delay: 1s;
+    text-align: center;
 }
 
 .navbar__container {
@@ -136,7 +133,6 @@ body:not(:hover) .cursor {
 .navbar__links {
     display: flex;
     gap: 1.5rem;
-    
 }
 
 .navbar__link {
@@ -147,14 +143,10 @@ body:not(:hover) .cursor {
     text-decoration: none;
 }
 
-.navbar__links :hover{
-    animation: ease-in-out;
+.navbar__link:hover {
     color: var(--color-primary);
-}
-
-.navbar__links a {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0.9;
+    transition: all 0.3s ease-in-out;
 }
 
 .main{

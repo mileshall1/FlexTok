@@ -47,7 +47,7 @@
             margin-left: auto;
         }
 
-        .nav-links span {
+        .nav-links a {
             cursor: pointer;
             transition: opacity 0.2s;
             font-family: 'Nunito', sans-serif;
@@ -56,7 +56,7 @@
             color: #ffffff;
         }
 
-        .nav-links span:hover {
+        .nav-links a:hover {
             opacity: 0.8;
         }
 
@@ -176,9 +176,9 @@
                 <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ecc09fec-e0fb-49d9-a0f0-da4cc2700834" alt="Flex Tok Logo">
                 <span>Flex<br>Tok</span>
                 <div class="nav-links">
-                    <span>Home</span>
-                    <span>About</span>
-                    <span>Features</span>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#features" class="nav-link">Features</a>
+                    <a href="index.html#about" class="nav-link">About</a>
                 </div>
             </div>
         </div>
@@ -225,14 +225,14 @@
         <!-- Bottom Navbar -->
         <footer class="bottom-navbar">
             <div class="footer-nav">
-                <span>Home</span>
-                <span>About</span>
+                <a href="index.html" class="footer-link">Home</a>
+                <a href="index.html#about" class="footer-link">About</a>
                 <div class="github-button">
                     <img src="path/to/github-icon.png" alt="GitHub icon">
                     <span>Star us on GitHub</span>
                 </div>
-                <span>Contact</span>
-                <span>Features</span>
+                <a href="index.html#about" class="footer-link">Contact</a>
+                <a href="index.html#features" class="footer-link">Features</a>
             </div>
         </footer>
     </div>
