@@ -4,25 +4,208 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memes from September</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Nunito:wght@700&family=Roboto:wght@600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            min-height: 100vh;
+            color: #ffffff;
+        }
+
+        .frame {
+            width: 100%;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .navbar {
+            margin-bottom: 2rem;
+        }
+
+        .nav-bar-bg {
+            width: 100%;
+            max-width: 600px;
+            height: 48px;
+            background-color: #141419;
+            border-radius: 100px;
+            border: 1px solid #2b2c30;
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            gap: 1rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            margin-left: auto;
+        }
+
+        .nav-links a {
+            cursor: pointer;
+            transition: opacity 0.2s;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 50px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .meme-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .meme-card {
+            background-color: #141419;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .meme-card:last-child {
+            grid-column: 1 / -1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .meme-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .meme-card h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 29px;
+            color: #ffffff;
+        }
+
+        .meme-card p {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 17px;
+            color: #ffffff;
+        }
+
+        .navigation-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .nav-button {
+            width: 49px;
+            height: 49px;
+            background-color: #141419;
+            border: 1px solid #2b2c30;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-button:hover {
+            background-color: #1f1f26;
+        }
+
+        .bottom-navbar {
+            width: 100%;
+            padding: 2rem 0;
+        }
+
+        .footer-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-link {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .footer-link:hover {
+            opacity: 0.8;
+        }
+
+        .github-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid #6a5a5e;
+            border-radius: 77px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .github-button:hover {
+            background-color: #1f1f26;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .footer-nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Depth 0: FRAME -->
     <div class="frame">
-        <!-- Depth 1: NavBar -->
+        <!-- Navigation -->
         <nav class="navbar">
-            <!-- Depth 2: Nav Bar Background -->
             <div class="nav-bar-bg">
                 <div class="logo-container">
-                    <!-- Depth 2: Logo Image -->
                     <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3483ba46-593f-4a82-b4a6-2cc714da0f23" alt="Flex Tok Logo" class="logo">
-                    <!-- Depth 2: Brand Text -->
                     <span class="brand-name">Flex<br>Tok</span>
                 </div>
-                <!-- Depth 2: Navbar Text Group -->
                 <div class="nav-links">
-                    <!-- Depth 3: Navigation Links -->
                     <a href="#" class="nav-link">Home</a>
                     <a href="#" class="nav-link">About</a>
                     <a href="#" class="nav-link">Features</a>
@@ -30,10 +213,10 @@
             </div>
         </nav>
 
-        <!-- Depth 1: Page Title -->
+        <!-- Main Content -->
         <h1 class="page-title">Memes from September</h1>
 
-        <!-- Depth 1: Meme Grid -->
+        <!-- Meme Grid -->
         <div class="meme-grid">
             <!-- I Like My Cheese Drippy Meme -->
             <div class="meme-card">
@@ -57,17 +240,17 @@
             </div>
         </div>
 
-        <!-- Depth 1: Navigation Controls -->
+        <!-- Navigation Controls -->
         <div class="navigation-controls">
-            <button class="nav-button" onclick="window.location.href='august.html'">
+            <a href="august.html" class="nav-button">
                 <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fc13502c-7a7e-4425-844d-f8cf2de6713d" alt="Previous">
-            </button>
-            <button class="nav-button" onclick="window.location.href='october.html'">
+            </a>
+            <a href="october.html" class="nav-button">
                 <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5448bba6-c15f-4319-a7f5-3202b234ffa1" alt="Next">
-            </button>
+            </a>
         </div>
 
-        <!-- Depth 1: Bottom Navbar -->
+        <!-- Bottom Navigation -->
         <footer class="bottom-navbar">
             <nav class="footer-nav">
                 <a href="#" class="footer-link">Home</a>

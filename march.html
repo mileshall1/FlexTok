@@ -5,74 +5,235 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memes from March</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Nunito:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            min-height: 100vh;
+            color: #ffffff;
+        }
+
+        .frame {
+            width: 100%;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .navbar {
+            margin-bottom: 2rem;
+        }
+
+        .nav-bar-bg {
+            width: 100%;
+            max-width: 600px;
+            height: 48px;
+            background-color: #141419;
+            border-radius: 100px;
+            border: 1px solid #2b2c30;
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            margin-left: auto;
+        }
+
+        .nav-links span {
+            cursor: pointer;
+            transition: opacity 0.2s;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            color: #ffffff;
+        }
+
+        .nav-links span:hover {
+            opacity: 0.8;
+        }
+
+        .meme-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .meme-card {
+            background-color: #141419;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .meme-card:last-child {
+            grid-column: 1 / -1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .meme-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .meme-card h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 29px;
+            color: #ffffff;
+        }
+
+        .meme-card p {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 17px;
+            color: #ffffff;
+        }
+
+        .navigation-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .nav-button {
+            width: 49px;
+            height: 49px;
+            background-color: #141419;
+            border: 1px solid #2b2c30;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-button:hover {
+            background-color: #1f1f26;
+        }
+
+        .bottom-navbar {
+            width: 100%;
+            padding: 2rem 0;
+        }
+
+        .footer-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .github-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid #6a5a5e;
+            border-radius: 77px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .github-button:hover {
+            background-color: #1f1f26;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .footer-nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="frame">
-        <!-- Top Navigation -->
-        <nav class="navbar">
+        <!-- NavBar -->
+        <div class="navbar">
             <div class="nav-bar-bg">
-                <div class="logo-container">
-                    <img src="path/to/logo.png" alt="Flex Tok Logo" class="logo">
-                    <span class="brand-name">Flex<br>Tok</span>
-                </div>
+                <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ecc09fec-e0fb-49d9-a0f0-da4cc2700834" alt="Flex Tok Logo">
+                <span>Flex<br>Tok</span>
                 <div class="nav-links">
-                    <a href="#" class="nav-link">Home</a>
-                    <a href="#" class="nav-link">About</a>
-                    <a href="#" class="nav-link">Features</a>
+                    <span>Home</span>
+                    <span>About</span>
+                    <span>Features</span>
                 </div>
             </div>
-        </nav>
-
-        <!-- Page Title -->
-        <h1 class="page-title">Memes from March</h1>
-
-        <!-- Meme Grid -->
-        <div class="meme-grid">
-            <!-- Meme Card 1 -->
-            <div class="meme-card">
-                <h2>You are my Sunshine 🌞️</h2>
-                <img src="/components/lebronsunshine.png" alt="LeBron James Sunshine Meme" class="meme-image">
-                <p class="description">The "You Are My Sunshine" meme featuring LeBron James became a viral sensation in early 2024. This trend involved pairing footage of LeBron James with the song "You Are My Sunshine" by Christina Perri, often accompanied by captions expressing deep admiration for the basketball star.</p>
-            </div>
-
-            <!-- Meme Card 2 -->
-            <div class="meme-card">
-                <h2>Tiktok Rizz Party🕺🏻</h2>
-                <img src="/components/rizzparty.png" alt="TikTok Rizz Party" class="meme-image">
-                <p class="description">TikTok Rizz Party "Carnival" Boys & Turkish Quandale Dingle. In early 2024, a group of teens at a Sweet 16 party dancing to Kanye West's "Carnival" went viral. One boy, wearing a blue tie and leading the group, became known as the Blue Tie Kid.</p>
-            </div>
-
-            <!-- Meme Card 3 -->
-            <div class="meme-card">
-                <h2>What's up Brother!👆</h2>
-                <img src="/components/sketch.png" alt="What's up Brother Meme" class="meme-image">
-                <p class="description">The "What's Up Brother?" meme comes from NFL Madden streamer Sketch, who became popular for saying the phrase with his finger pointed upward and his trademark "Tuesday, Tuesday" chant while bumping his fists.</p>
-            </div>
         </div>
 
-        <!-- Navigation Controls -->
-        <div class="navigation-controls">
-            <button class="nav-button" onclick="window.location.href='february.html'">
-                <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fc13502c-7a7e-4425-844d-f8cf2de6713d" alt="Previous">
-            </button>
-            <button class="nav-button" onclick="window.location.href='april.html'">
-                <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5448bba6-c15f-4319-a7f5-3202b234ffa1" alt="Next">
-            </button>
-        </div>
+        <!-- Main Content -->
+        <main>
+            <h1>Memes from March</h1>
 
-        <!-- Bottom Navigation -->
-        <footer class="bottom-navbar">
-            <nav class="footer-nav">
-                <a href="#" class="footer-link">Home</a>
-                <a href="#" class="footer-link">About</a>
-                <a href="#" class="footer-link">Contact</a>
-                <a href="#" class="footer-link">Features</a>
-                <a href="https://github.com/your-repo" class="github-button">
-                    <img src="path/to/github-icon.png" alt="GitHub">
-                    Star us on GitHub
+            <!-- Meme Grid -->
+            <div class="meme-grid">
+                <!-- You are my Sunshine -->
+                <div class="meme-card">
+                    <h2>You are my Sunshine 🌞️</h2>
+                    <img src="/components/lebronsunshine.png" alt="LeBron James Sunshine Meme">
+                    <p>The "You Are My Sunshine" meme featuring LeBron James became a viral sensation in early 2024. This trend involved pairing footage of LeBron James with the song "You Are My Sunshine" by Christina Perri, often accompanied by captions expressing deep admiration for the basketball star.</p>
+                </div>
+
+                <!-- Tiktok Rizz Party -->
+                <div class="meme-card">
+                    <h2>Tiktok Rizz Party🕺🏻</h2>
+                    <img src="/components/rizzparty.png" alt="TikTok Rizz Party">
+                    <p>TikTok Rizz Party "Carnival" Boys & Turkish Quandale Dingle. In early 2024, a group of teens at a Sweet 16 party dancing to Kanye West's "Carnival" went viral. One boy, wearing a blue tie and leading the group, became known as the Blue Tie Kid.</p>
+                </div>
+
+                <!-- What's up Brother -->
+                <div class="meme-card">
+                    <h2>What's up Brother!👆</h2>
+                    <img src="/components/sketch.png" alt="What's up Brother Meme">
+                    <p>The "What's Up Brother?" meme comes from NFL Madden streamer Sketch, who became popular for saying the phrase with his finger pointed upward and his trademark "Tuesday, Tuesday" chant while bumping his fists.</p>
+                </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="navigation-controls">
+                <a href="february.html" class="nav-button">
+                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fc13502c-7a7e-4425-844d-f8cf2de6713d" alt="Previous">
                 </a>
-            </nav>
+                <a href="april.html" class="nav-button">
+                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5448bba6-c15f-4319-a7f5-3202b234ffa1" alt="Next">
+                </a>
+            </div>
+        </main>
+
+        <!-- Bottom Navbar -->
+        <footer class="bottom-navbar">
+            <div class="footer-nav">
+                <span>Home</span>
+                <span>About</span>
+                <div class="github-button">
+                    <img src="path/to/github-icon.png" alt="GitHub icon">
+                    <span>Star us on GitHub</span>
+                </div>
+                <span>Contact</span>
+                <span>Features</span>
+            </div>
         </footer>
     </div>
 </body>

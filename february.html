@@ -5,74 +5,214 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memes from February</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Nunito:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            min-height: 100vh;
+            color: #ffffff;
+        }
+
+        .frame {
+            width: 100%;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .navbar {
+            margin-bottom: 2rem;
+        }
+
+        .nav-bar-bg {
+            width: 100%;
+            max-width: 600px;
+            height: 48px;
+            background-color: #141419;
+            border-radius: 100px;
+            border: 1px solid #2b2c30;
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            gap: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            margin-left: auto;
+        }
+
+        .nav-links span {
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .nav-links span:hover {
+            opacity: 0.8;
+        }
+
+        .meme-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .meme-card {
+            background-color: #141419;
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .meme-card:last-child {
+            grid-column: 1 / -1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .meme-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .navigation-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .nav-button {
+            width: 49px;
+            height: 49px;
+            background-color: #141419;
+            border: 1px solid #2b2c30;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .nav-button:hover {
+            background-color: #1f1f26;
+        }
+
+        .bottom-navbar {
+            width: 100%;
+            padding: 2rem 0;
+        }
+
+        .footer-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .github-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid #6a5a5e;
+            border-radius: 77px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .github-button:hover {
+            background-color: #1f1f26;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .footer-nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="frame">
-        <!-- Top Navigation -->
-        <nav class="navbar">
-            <div class="nav-bar-bg">
-                <div class="logo-container">
-                    <img src="path/to/logo.png" alt="Flex Tok Logo" class="logo">
-                    <span class="brand-name">Flex<br>Tok</span>
-                </div>
-                <div class="nav-links">
-                    <a href="#" class="nav-link">Home</a>
-                    <a href="#" class="nav-link">About</a>
-                    <a href="#" class="nav-link">Features</a>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Page Title -->
-        <h1 class="page-title">Memes from February</h1>
-
-        <!-- Meme Grid -->
-        <div class="meme-grid">
-            <!-- Meme Card 1 -->
-            <div class="meme-card">
-                <h2>Green Fn 🏀</h2>
-                <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a6603dba-e086-4c6f-a4b5-01706d5c31cb" alt="Green FN Meme" class="meme-image">
-                <p class="description">The Green FN meme exploded in 2024, celebrating flawless, game-winning plays in gaming. The phrase "Green FN" became synonymous with perfect clips, similar to a buzzer-beater in basketball. Gamers flooded TikTok and Twitter with highlight reels, turning their smoothest moments into viral "Green FN" clips.</p>
-            </div>
-
-            <!-- Meme Card 2 -->
-            <div class="meme-card">
-                <h2>Chick-Fil-a Sauce 🐄</h2>
-                <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5728b506-a2d5-4d26-83e3-29ad6d845ba9" alt="Chick-fil-A Sauce Meme" class="meme-image">
-                <p class="description">The Chick-fil-A Sauce meme blew up in 2024, with fans treating the sauce like liquid gold. TikTok and Twitter were filled with jokes about its obsessive appeal, with people willing to trade anything for an extra packet. What started as a condiment became a viral obsession.</p>
-            </div>
-
-            <!-- Meme Card 3 -->
-            <div class="meme-card">
-                <h2>Costco Guys 🥖</h2>
-                <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5cbfb508-90de-4ed3-b516-7b53a4143541" alt="Costco Guys" class="meme-image">
-                <p class="description">The Costco Guys meme went viral in 2024, featuring a group of friends dramatically reviewing Costco foods with an exaggerated "boom" rating scale. Their over-the-top enthusiasm turned items like chicken bakes and pizza into Michelin-star experiences. The meme gained popularity on TikTok, with fans loving their absurd yet entertaining food critiques.</p>
-            </div>
+       <!-- NavBar -->
+<div class="navbar">
+    <div class="nav-bar-bg">
+        <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ecc09fec-e0fb-49d9-a0f0-da4cc2700834" alt="Flex Tok Logo">
+        <span>Flex<br>Tok</span>
+        <div class="nav-links">
+            <span>Home</span>
+            <span>About</span>
+            <span>Features</span>
         </div>
+    </div>
+</div>
 
-        <!-- Navigation Controls -->
-        <div class="navigation-controls">
-            <button class="nav-button" onclick="window.location.href='january.html'">
-                <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/21773f1e-335f-48c6-a252-fd50594bbfa4" alt="Previous">
-            </button>
-            <button class="nav-button" onclick="window.location.href='march.html'">
-                <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bac29197-1d6e-4e83-95ec-515747cd84e2" alt="Next">
-            </button>
-        </div>
+        <!-- Main Content -->
+        <main>
+            <h1>Memes from February</h1>
 
-        <!-- Bottom Navigation -->
-        <footer class="bottom-navbar">
-            <nav class="footer-nav">
-                <a href="#" class="footer-link">Home</a>
-                <a href="#" class="footer-link">About</a>
-                <a href="#" class="footer-link">Contact</a>
-                <a href="#" class="footer-link">Features</a>
-                <a href="https://github.com/your-repo" class="github-button">
-                    <img src="path/to/github-icon.png" alt="GitHub">
-                    Star us on GitHub
+            <!-- Meme Grid -->
+            <div class="meme-grid">
+                <!-- Green FN -->
+                <div class="meme-card">
+                    <h2>Green Fn 🏀</h2>
+                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a6603dba-e086-4c6f-a4b5-01706d5c31cb" alt="Green FN Meme">
+                    <p>The Green FN meme exploded in 2024, celebrating flawless, game-winning plays in gaming. The phrase "Green FN" became synonymous with perfect clips, similar to a buzzer-beater in basketball. Gamers flooded TikTok and Twitter with highlight reels, turning their smoothest moments into viral "Green FN" clips.</p>
+                </div>
+
+                <!-- Chick-Fil-A Sauce -->
+                <div class="meme-card">
+                    <h2>Chick-Fil-a Sauce 🐄</h2>
+                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5728b506-a2d5-4d26-83e3-29ad6d845ba9" alt="Chick-fil-A Sauce Meme">
+                    <p>The Chick-fil-A Sauce meme blew up in 2024, with fans treating the sauce like liquid gold. TikTok and Twitter were filled with jokes about its obsessive appeal, with people willing to trade anything for an extra packet. What started as a condiment became a viral obsession.</p>
+                </div>
+
+                <!-- Costco Guys -->
+                <div class="meme-card">
+                    <h2>Costco Guys 🥖</h2>
+                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5cbfb508-90de-4ed3-b516-7b53a4143541" alt="Costco Guys">
+                    <p>The Costco Guys meme went viral in 2024, featuring a group of friends dramatically reviewing Costco foods with an exaggerated "boom" rating scale. Their over-the-top enthusiasm turned items like chicken bakes and pizza into Michelin-star experiences. The meme gained popularity on TikTok, with fans loving their absurd yet entertaining food critiques.</p>
+                </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="navigation-controls">
+                <a href="january.html" class="nav-button">
+                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/21773f1e-335f-48c6-a252-fd50594bbfa4" alt="Previous">
                 </a>
-            </nav>
+                <a href="march.html" class="nav-button">
+                    <img src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bac29197-1d6e-4e83-95ec-515747cd84e2" alt="Next">
+                </a>
+            </div>
+        </main>
+
+        <!-- Bottom Navbar -->
+        <footer class="bottom-navbar">
+            <div class="footer-nav">
+                <span>Home</span>
+                <span>About</span>
+                <div class="github-button">
+                    <img src="path/to/github-icon.png" alt="GitHub icon">
+                    <span>Star us on GitHub</span>
+                </div>
+                <span>Contact</span>
+                <span>Features</span>
+            </div>
         </footer>
     </div>
 </body>
