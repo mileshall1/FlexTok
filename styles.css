@@ -380,7 +380,6 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-
 .bottom-navbar__link {
     font-family: 'Nunito', sans-serif;
     font-size: 17px;
@@ -396,11 +395,23 @@ body {
     padding: 0.5rem 1.5rem;
     border: 1.5px solid rgba(255, 255, 255, 0.12);
     border-radius: 77px;
+    transition: all 0.3s ease-in-out;
 }
 
 .bottom-navbar__github-icon {
     width: 24px;
     height: 24px;
+}
+
+.bottom-navbar__link--github:hover {
+    border-color: #FFD700;
+    color: #FFD700;
+    transform: scale(1.05);
+}
+
+.bottom-navbar__link--github:hover .bottom-navbar__github-icon {
+    filter: brightness(0) saturate(100%) invert(79%) sepia(71%) saturate(1095%) hue-rotate(359deg) brightness(105%) contrast(107%);
+    transition: all 0.3s ease-in-out;
 }
 
 html {
