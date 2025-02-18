@@ -20,6 +20,58 @@ body {
     background-color: var(--color-background);
     color: var(--color-text);
     line-height: 1.5;
+    cursor: none;
+}
+
+a, button, .hover-target {
+    cursor: pointer;
+}
+
+body:not(:hover) .cursor {
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.8);
+}
+
+.cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.6), transparent);
+    border-radius: 50%;
+    box-shadow: 0 0 15px 8px rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+    transition: transform 0.05s linear, width 0.2s ease, height 0.2s ease, box-shadow 0.2s ease;
+    z-index: 9999;
+}
+
+.trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+.hover-effect {
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.8);
 }
 
 .home-page {
