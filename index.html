@@ -8,16 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="home-page">
+    <div class="home-page" id ="home">
         <nav class="navbar">
             <div class="navbar__container">
                 <div class="navbar__logo">
-                    <img src="flextok_logo.png" alt="FlexTok Logo" class="navbar__logo-img">
+                    <a href="/">
+                        <img src="flextok_logo.png" alt="FlexTok Logo" class="navbar__logo-img">
+                    </a>
                 </div>
                 <div class="navbar__links">
-                    <a href="#" class="navbar__link navbar__link--active">Home</a>
-                    <a href="#" class="navbar__link">About</a>
-                    <a href="#" class="navbar__link">Features</a>
+                    <a href="#home" class="navbar__link navbar__link--active">Home</a>
+                    <a href="#about" class="navbar__link">About</a>
+                    <a href="#features" class="navbar__link">Features</a>
                 </div>
             </div>
         </nav>
@@ -38,7 +40,7 @@
                 </a>
             </div>
 
-            <section class="features">
+            <section class="features" id ="features">
                 <h2 class="features__title">Features</h2>
                 <div class="features__grid">
                     <div class="feature-card">
@@ -60,12 +62,12 @@
             </section>
 
             <footer class="footer">
-                <div class="footer__content">
+                <div class="footer__content" id ="about">
                     <div class="footer__info">
                         <h2 class="footer__title">FlexTok</h2>
                         <p class="footer__text">
                             Created at Nosu's SuperFlex Hackathon 💜<br><br>
-                            Powered by Miles, Kelechi, and Armaan
+                            Powered by <a href="https://www.linkedin.com/in/miles-hall1/" style="color:white">Miles</a>, <a href="https://linkedin.com/in/kelechi-opurum\" style="color: white">Kelechi</a> and <a href="https://www.linkedin.com/in/armaan-bukhari-560791193/" style="color: white ">Armaan</a>
                         </p>
                     </div>
                     <div class="footer__image">
@@ -76,12 +78,12 @@
                     <div class="bottom-navbar__links">
                         <a href="#" class="bottom-navbar__link">Home</a>
                         <a href="#" class="bottom-navbar__link">About</a>
-                        <a href="#" class="bottom-navbar__link">Features</a>
-                        <a href="#" class="bottom-navbar__link">Contact</a>
                         <a href="#" class="bottom-navbar__link bottom-navbar__link--github">
                             <img src="github.png" alt="GitHub" class="bottom-navbar__github-icon">
                             Star us on GitHub
                         </a>
+                        <a href="#" class="bottom-navbar__link">Features</a>
+                        <a href="#" class="bottom-navbar__link">Contact</a>
                     </div>
                 </nav>
             </footer>
