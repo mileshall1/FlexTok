@@ -246,14 +246,14 @@ body {
 .features {
     margin-bottom: 4rem;
     text-align: center;
-    margin-top: 300px;
+    margin-top: 200px;
 }
 
 .features__title {
     font-family: 'Nunito', sans-serif;
     font-size: 40px;
     font-weight: 700;
-    margin-bottom: 3rem;
+    margin-bottom: 3em;
     text-align: center;
 }
 
@@ -300,7 +300,7 @@ body {
 .features__cta {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: -5rem;
 }
 
 .btn--explore {
