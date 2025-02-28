@@ -1,4 +1,4 @@
-# 2024 Meme Review by Flextok  
+# 2024 Meme Review by Flextok (Frontend WIP 🚧)  
 
 **Created by Miles Hall, Kelechi Opurum, and Armaan Bhukari**  
 
